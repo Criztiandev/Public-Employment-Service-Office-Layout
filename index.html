@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="fixed top-0 navbar">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-xl">Logo</a>
+      </div>
+      <div class="navbar-end hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="#">Home</a></li>
+          <li>
+            <details>
+              <summary>Login</summary>
+              <ul class="p-4 border border-gray-300">
+                <li><a href="pages/user/index.html">User</a></li>
+                <li><a href="pages/admin/index.html">Admin</a></li>
+                <li><a href="pages/company/index.html">Company</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="px-[32px]">
+      <section
+        class="h-screen flex justify-center items-center grid grid-cols-2 gap-4">
+        <article>
+          <h1 class="text-[52px] font-bold">
+            Welcome to
+            <br />
+            <span>PESO-TAGAYTAY CITY</span>
+          </h1>
+          <p class="my-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+            doloremque consequuntur nesciunt, a accusantium modi in facere? Illo
+            distinctio exercitationem quae nobis doloremque sed eum molestias in
+            rem, ipsam tenetur quasi blanditiis cum, fugiat
+          </p>
+          <button class="btn rounded-full w-[200px]">Get Started</button>
+        </article>
+
+        <div class="flex justify-center items-center">
+          <figure class="w-[400px] h-[400px] border border-black"></figure>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

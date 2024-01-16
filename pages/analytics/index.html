@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="h-screen w-screen grid grid-cols-[200px_auto]">
+      <aside class="sidebar flex flex-col justify-between p-4">
+        <div>
+          <div class="text-[32px] font-bold p-4 text-center">Logo</div>
+          <ul class="menu rounded-box">
+            <li><a href="../analytics/index.html">Analytics</a></li>
+            <li><a href="../applicants/index.html ">Application</a></li>
+            <li>
+              <details>
+                <summary>Jobs</summary>
+                <ul>
+                  <li><a href="../pending-job/index.html">Pending Job</a></li>
+                  <li><a href="../current-job/index.html">Current Job</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="../company/index.html">Company</a></li>
+            <li><a href="../activities/index.html">Activities</a></li>
+          </ul>
+        </div>
+        <button
+          onclick="dialog_logout.showModal()"
+          class="btn w-full bg-slate-500 border-none hover:bg-red-500 text-white text-base btn-md">
+          Logout
+        </button>
+      </aside>
+
+      <section class="w-[100%] p-4 overflow-hidden">
+        <div class="grid grid-cols-3 gap-4 w-full">
+          <div
+            class="w-full h-[175px] rounded-[10px] border border-gray-300 bg-white"></div>
+          <div
+            class="w-full h-[175px] rounded-[10px] border border-gray-300 bg-white"></div>
+          <div
+            class="w-full h-[175px] rounded-[10px] border border-gray-300 bg-white"></div>
+        </div>
+
+        <div class="w-full h-[380px] bg-white rounded-[5px] my-4">hi</div>
+      </section>
+    </main>
+  </body>
+</html>
+
+<!-- Delete Dialog -->
+<dialog id="dialog_logout" class="modal">
+  <div class="modal-box text-black">
+    <form>
+      <h3 class="font-bold text-lg">Logout!</h3>
+      <p class="py-4">Are you sure you want to logout ?</p>
+      <div class="flex gap-4 justify-end">
+        <button class="btn btn-sm">Confrim</button>
+        <button class="btn btn-sm">Cancel</button>
+      </div>
+    </form>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+
+<!-- Delete Dialog -->
+<dialog id="dialog_logout" class="modal">
+  <div class="modal-box text-black">
+    <form>
+      <h3 class="font-bold text-lg">Logout!</h3>
+      <p class="py-4">Are you sure you want to logout ?</p>
+      <div class="flex gap-4 justify-end">
+        <button class="btn btn-sm">Confrim</button>
+        <button class="btn btn-sm">Cancel</button>
+      </div>
+    </form>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>

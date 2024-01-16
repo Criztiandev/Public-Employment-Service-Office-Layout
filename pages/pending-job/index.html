@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="h-screen w-screen grid grid-cols-[200px_auto]">
+      <aside class="sidebar flex flex-col justify-between p-4">
+        <div>
+          <div class="text-[32px] font-bold p-4 text-center">Logo</div>
+          <ul class="menu rounded-box">
+            <li><a href="../analytics/index.html">Analytics</a></li>
+            <li><a href="../applicants/index.html ">Application</a></li>
+            <li>
+              <details>
+                <summary>Jobs</summary>
+                <ul>
+                  <li><a href="../pending-job/index.html">Pending Job</a></li>
+                  <li><a href="../current-job/index.html">Current Job</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="../company/index.html">Company</a></li>
+            <li><a href="../activities/index.html">Activities</a></li>
+          </ul>
+        </div>
+        <button
+          onclick="dialog_logout.showModal()"
+          class="btn w-full bg-slate-500 border-none hover:bg-red-500 text-white text-base btn-md">
+          Logout
+        </button>
+      </aside>
+
+      <section class="w-[100%] p-4 text-black">
+        <div class="w-full h-full bg-white rounded-[5px] p-4">
+          <header class="mb-8">
+            <h1 class="text-[32px] font-bold">PendingJobs</h1>
+          </header>
+
+          <div>
+            <div class="mb-4 flex justify-between">
+              <input
+                type="text"
+                class="input input-bordered w-[250px] input-md"
+                placeholder="Search here" />
+              <div>
+                <div class="dropdown dropdown-end">
+                  <div tabindex="0" role="button" class="btn m-1">Filter</div>
+                  <ul
+                    tabindex="0"
+                    class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 border border-gray-300">
+                    <li><a>Item 1</a></li>
+                    <li><a>Item 2</a></li>
+                  </ul>
+                </div>
+                <button class="btn" onclick="dialog_create.showModal()">
+                  Create
+                </button>
+              </div>
+            </div>
+            <div
+              class="overflow-x-auto h-[350px] border border-gray-300"
+              style="height: calc(100vh - 220px)">
+              <table class="table table-zebra rounded-[5px]">
+                <!-- head -->
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Job</th>
+                    <th>Favorite Color</th>
+                    <th class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- row 1 -->
+                  <tr>
+                    <th>1</th>
+                    <td>Cy Ganderton</td>
+                    <td>Quality Control Specialist</td>
+                    <td>Blue</td>
+                    <td>
+                      <div class="flex gap-4 justify-center">
+                        <button
+                          class="btn btn-sm"
+                          onclick="dialog_view.showModal()">
+                          View
+                        </button>
+                        <button
+                          class="btn btn-sm"
+                          onclick="dialog_edit.showModal()">
+                          Edit
+                        </button>
+
+                        <button
+                          class="btn btn-sm"
+                          onclick="dialog_delete.showModal()">
+                          Delete
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- row 2 -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+<!-- Create Dialog -->
+<dialog id="dialog_create" class="modal">
+  <div class="modal-box text-black">
+    <h3 class="font-bold text-lg">Create Job!</h3>
+    <p class="py-4">Press ESC key or click outside to close</p>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+
+<!-- View Dialog -->
+<dialog id="dialog_view" class="modal">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Hello!</h3>
+    <p class="py-4">Press ESC key or click outside to close</p>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+
+<!-- Edit Dialog -->
+<dialog id="dialog_edit" class="modal">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Hello!</h3>
+    <p class="py-4">Press ESC key or click outside to close</p>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+
+<!-- Delete Dialog -->
+<dialog id="dialog_delete" class="modal">
+  <div class="modal-box text-black">
+    <form>
+      <h3 class="font-bold text-lg">Notice!</h3>
+      <p class="py-4">
+        Are you sure you want to delete this information, deleting this will
+        remove the data to the database and cannot be restored
+      </p>
+      <div class="flex gap-4 justify-end">
+        <button class="btn btn-sm">Confrim</button>
+        <button class="btn btn-sm">Cancel</button>
+      </div>
+    </form>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
